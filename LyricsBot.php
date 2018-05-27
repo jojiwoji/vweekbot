@@ -1,6 +1,6 @@
 <?php
 
-require_once ('cron.php');
+include ('cron.php');
 include('twitterCredentials.php');
 include("LyricsBotHelpers.php");
 require_once('TwitterAPIExchange.php');
