@@ -90,4 +90,15 @@ if($songsNodes->length > 0){
   }
 }
 
+#!/usr/bin/env php
+// code
+echo "this was run from CRON"
+
+* * * * * /usr/bin/php -f /usr/local/bin/run.php &> /dev/null
+
+chmod +x /usr/local/bin/run.php
+and then add the following entry into crontab:
+
+30 0,4,8,12,16,20 * * * /usr/local/bin/run.php &> /dev/null
+
  ?>
