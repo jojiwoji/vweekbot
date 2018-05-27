@@ -1,5 +1,6 @@
 <?php
 
+require_once ('cron.php');
 include('twitterCredentials.php');
 include("LyricsBotHelpers.php");
 require_once('TwitterAPIExchange.php');
@@ -7,10 +8,10 @@ header('Content-Type: text/html; charset=utf-8');
 
 /** Set access tokens here - see: https://apps.twitter.com/ **/
 $APIsettings = array(
-    'oauth_access_token' => $oauthToken,
-    'oauth_access_token_secret' => $oauthTokenSecret,
-    'consumer_key' => $consumerKey,
-    'consumer_secret' => $consumerSecret
+    '1000730095131115521-zmbEzM5hLIyAznXYfQ3g2EDFIQvxhb' => $oauthToken,
+    'usWjbLBblhX9LwvRMNxhx38zIhbaN3gnbA6dAHpGKJt75' => $oauthTokenSecret,
+    'UTIlZnShuN52jyG2wKFaeetSi' => $consumerKey,
+    '5iAl77slH4WNKiCOKVnvTOQnDGMqohcFbgT8y2LXR0ssGzh8Yg' => $consumerSecret
 );
 
 /** Set Lyrics Wikia Artist Page here **/
