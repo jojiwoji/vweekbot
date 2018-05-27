@@ -90,15 +90,14 @@ if($songsNodes->length > 0){
   }
 }
 
-#!/usr/bin/env php
-// code
-echo "this was run from CRON"
+<?/** suppose we have 1 hour and 1 minute inteval 01:01 */
 
-* * * * * /usr/bin/php -f /usr/local/bin/run.php &> /dev/null
+$interval_source = "04:00";
+$time_now = strtotime( "now" ) / 60;
+$interval = substr($interval_source,0,2) * 60 + substr($interval_source,3,2);
 
-chmod +x /usr/local/bin/run.php
-and then add the following entry into crontab:
 
-30 0,4,8,12,16,20 * * * /usr/local/bin/run.php &> /dev/null
-
+if( $time_now % $interval == 0){
+/** do cronjob */
+}
  ?>
