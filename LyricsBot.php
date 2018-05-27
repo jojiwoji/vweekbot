@@ -14,7 +14,7 @@ $APIsettings = array(
 );
 
 /** Set Lyrics Wikia Artist Page here **/
-$artistWikiaLink = "LYRICS_WIKIA_ARTIST_PAGE"; // For example, for Manchester Orchestra: http://lyrics.wikia.com/wiki/Manchester_Orchestra
+$artistWikiaLink = "http://http://lyrics.wikia.com/wiki/Vampire_Weekend"; // For example, for Manchester Orchestra: http://lyrics.wikia.com/wiki/Manchester_Orchestra
 
 // Get list of songs with lyrics from artist page
 $artistLink = substr(strrchr( $artistWikiaLink, '/' ), 1);
@@ -57,7 +57,7 @@ if($songsNodes->length > 0){
 
     // Create the tweet between 1 and 4 sentences
     $splitLyrics = explode("\n", $lyrics);
-    $sentences = intval(rand(1, 4));
+    $sentences = intval(rand(1));
     // Try to create a tweet, but if no success in 20 tries, take another random song
     $tryCounter = 0;
     do{
